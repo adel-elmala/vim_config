@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/media/adel/1E9A1F939A1F6695/cs-path/gameDev/playGround'
+let g:netrw_dirhist_4='/home/adel/rdi-test'
+let g:netrw_dirhist_3='/home/adel'
+let g:netrw_dirhist_2='/home'
+let g:netrw_dirhist_1='/home/adel'
