@@ -1,0 +1,57 @@
+" Vim with all enhancements
+source $VIMRUNTIME/vimrc_example.vim
+
+
+syntax on
+filetype indent on
+filetype plugin indent on
+
+set nocompatible
+set noswapfile  " turn off swapfiles
+set autoindent  "Auto-indent new lines
+set expandtab   "Use spaces instead of tabs
+set smartindent "Enable smart-indent
+set smarttab    "Enable smart-tabs
+set softtabstop=4   "Number of spaces per Tab
+set wildmenu            " visual autocomplete for command menu
+set wildignore+=*.o,*.obj,*.exe,*.swp,*~,build*/**,build/**
+set lazyredraw          " redraw only when we need to.
+set nobackup            " no backup~ files.
+set viminfo='20,\"500   " remember copy registers after quitting in the .viminfo file -- 20 jump links, regs up to 500 lines'
+set hidden              " remember undo after quitting
+set history=150          " keep 50 lines of command history
+
+
+
+" Splits
+set splitbelow    " more natural split opening
+set splitright    " more natural split opening
+
+call plug#begin()
+	Plug 'morhetz/gruvbox'
+	Plug 'preservim/nerdtree'
+	Plug 'valloric/youcompleteme'
+""	Plug 'justmao945/vim-clang'
+
+call plug#end()
+
+
+set number
+set belloff=all
+set tabstop=4
+set shiftwidth=4
+set encoding=utf-8
+set termguicolors
+colorscheme gruvbox
+set nowrap
+set nobackup
+set foldmethod=syntax
+:set signcolumn=no 
+" edit font
+set guifont=Cascadia_Mono_SemiBold:h10:W600:cANSI
+
+" custom mapping
+nmap <leader>f :YcmCompleter Format<CR>
+nmap <leader><F12> :YcmCompleter GoTo<CR>
+nmap <leader>\ <plug>(YCMHover)
+nmap <leader>n :NERDTreeToggle<CR>
